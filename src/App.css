@@ -1,0 +1,105 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  padding: 2.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.App-header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+  opacity: 0.6;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.App-header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  flex: 1;
+  padding: 3rem;
+  background-color: #f9fafc;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+footer {
+  padding: 1.8rem 0;
+  background-color: #f0f2f5;
+  color: #667085;
+  border-top: 1px solid #e0e0e0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 500;
+}
+
+footer a {
+  color: #3a7bd5;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #00d2ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  main {
+    padding: 2rem 1.5rem;
+  }
+  
+  .App-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .App-header p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,321 @@
+.doc-viewer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 35px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.doc-viewer:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.doc-viewer h2 {
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+  position: relative;
+}
+
+.doc-viewer h2:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+  border-radius: 3px;
+}
+
+.doc-viewer h3 {
+  color: #334155;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 15px;
+}
+
+.doc-viewer h3:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 25px;
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+  border-radius: 3px;
+}
+
+.upload-section {
+  margin-bottom: 40px;
+  padding: 40px;
+  border: 3px dashed #d0d7de;
+  border-radius: 16px;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.upload-section:hover {
+  border-color: #3a7bd5;
+  background-color: #f0f7ff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(58, 123, 213, 0.12);
+}
+
+.upload-section:before {
+  content: 'Upload';
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.file-input {
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 18px;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-input:hover {
+  border-color: #3a7bd5;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.file-input::-webkit-file-upload-button {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 20px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.file-input::-webkit-file-upload-button:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.file-info {
+  margin-top: 25px;
+  text-align: center;
+  background-color: white;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.file-info p {
+  margin: 0 0 25px 0;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-info p:before {
+  content: '📄';
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.view-button {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  padding: 16px 34px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s;
+}
+
+.view-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.view-button:hover:before {
+  left: 100%;
+}
+
+.view-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.iframe-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.iframe-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.doc-iframe {
+  width: 100%;
+  height: 70vh;
+  border: none;
+  background-color: white;
+}
+
+/* Modal Styles */
+.doc-preview-modal {
+  max-width: 90%;
+}
+
+.modal-content {
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  border-bottom: none;
+  padding: 1.5rem 1.8rem;
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.modal-header .btn-close {
+  color: white;
+  opacity: 0.8;
+  box-shadow: none;
+}
+
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 1.8rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.2rem 1.8rem;
+}
+
+/* Button in modal footer */
+.btn-secondary {
+  background: #6c757d;
+  border: none;
+  padding: 10px 24px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .doc-viewer {
+    padding: 25px 20px;
+  }
+  
+  .upload-section {
+    padding: 30px 20px;
+  }
+  
+  .file-input::-webkit-file-upload-button {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .view-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+  
+  .doc-viewer h2 {
+    font-size: 1.8rem;
+  }
+  
+  .doc-iframe {
+    height: 60vh;
+  }
+}
